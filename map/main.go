@@ -22,4 +22,16 @@ func main() {
 	delete(languages, "js")
 	fmt.Println("updated map: ", languages)
 
+	//loop in map
+	for index,data := range languages{
+		fmt.Printf("language is : %s and fullform is : %s \n",index,data )
+	}
+
+
+	//check if key exist
+
+	key,exists := languages["py"]
+
+	fmt.Printf("key is : %s \n ",key)
+	fmt.Print("key is exists : ",exists)
 }
