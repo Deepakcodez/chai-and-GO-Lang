@@ -10,7 +10,7 @@ func main() {
 
 	fmt.Print("web request in GO")
 
-	resp, err := http.Get("https://jsonplaceholder.typicode.com/todos/1")
+	resp, err := http.Get("https://jsonplaceholder.typicode.com/todos/")
 
 	if(err != nil){
 		fmt.Println("something error in fetching data")
@@ -23,7 +23,7 @@ func main() {
 	// fmt.Println(resp)    this we give unreadable formate of response 
 
 	data, err := ioutil.ReadAll(resp.Body)
-    //data in the form of binary we have to convert into string
+    //data in the form of array of byte we have to convert into string
 	if(err != nil){
 		fmt.Println("Error in reading fetched data")
 	}
